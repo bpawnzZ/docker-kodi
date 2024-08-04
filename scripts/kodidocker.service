@@ -1,0 +1,15 @@
+[Unit]
+Description=Kodi Docker Container
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=forking
+ExecStart=/usr/local/bin/start_kodi_docker.sh
+ExecStop=/usr/local/bin/stop_kodi_docker.sh
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+

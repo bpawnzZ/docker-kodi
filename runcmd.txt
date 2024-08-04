@@ -1,0 +1,15 @@
+$ x11docker --weston                                 \
+            --pulseaudio \
+	    --gpu \
+            --homedir /home/insomnia/git/docker-kodi/homedir      \
+            -- -v /home/insomnnia/Videos:ro:/media -- \
+            erichough/kodi
+
+sudo x11docker --weston --net=bridge \
+            --pulseaudio \
+            --gpu=direct \
+            --desktop \
+            --homedir=/home/insomnia/git/docker-kodi/homedir \
+            -- -v /home/insomnia/Videos:ro:/media -- \
+            erichough/kodi
+
